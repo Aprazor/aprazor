@@ -4,9 +4,8 @@
 
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F71F86&random=false&width=435&lines=Talks+About+DevOps%2C+Cloud+%26+Network;Always+Learning+New+Things!&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
-</p>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F71F86&random=false&width=435&lines=Talks+About+DevOps%2C+Cloud+%26+Network;Always+Learning+New+Things!" alt="Typing SVG" />
+  </a>
 
 # 🚀 About
 
