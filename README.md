@@ -50,7 +50,7 @@
 
 <p align="center">
     <a href="https://github.com/Aprazor/My-Notes-Collection"><img width="278" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=Aprazor&repo=My-Notes-Collection&theme=react&bg_color=1F222E&title_color=F85D7F&hide_border=true&icon_color=F8D866&show_icons=false" alt="github-readme-streak-stats"></a>
-    <a href="Ansible-Network-Automation-Scripts"><img width="278" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin?username=Aprazor&repo=Ansible-Network-Automation-Scripts&theme=react&bg_color=1F222E&title_color=F85D7F&hide_border=true&icon_color=F8D866&show_icons=false" alt="custom-icon-badges"></a>
+    <a href="https://github.com/Aprazor/Ansible-Network-Automation-Scripts"><img width="278" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin?username=Aprazor&repo=Ansible-Network-Automation-Scripts&theme=react&bg_color=1F222E&title_color=F85D7F&hide_border=true&icon_color=F8D866&show_icons=false" alt="custom-icon-badges"></a>
     <a href="https://github.com/Aprazor/DevOps-Project"><img width="278" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=Aprazor&repo=DevOps-Project&theme=react&bg_color=1F222E&title_color=F85D7F&hide_border=true&icon_color=F8D866&show_icons=false" alt="github-readme-streak-stats"></a>
 
 </p>
