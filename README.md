@@ -42,7 +42,7 @@
  <img src="https://github.com/devicons/devicon/blob/master/icons/cloudflare/cloudflare-original.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/grafana/grafana-original.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-plain-wordmark.svg" width="50" height="50" />
- <img src=" https://github.com/devicons/devicon/blob/master/icons/sonarqube/sonarqube-original-wordmark.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/sonarqube/sonarqube-original-wordmark.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" width="50" height="50" />
