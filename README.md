@@ -39,16 +39,27 @@
 <img src="https://github.com/devicons/devicon/blob/master/icons/canva/canva-original.svg"  width="50" height="50"/>
   &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/wordpress/wordpress-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/cloudflare/cloudflare-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/grafana/grafana-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-plain-wordmark.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/sonarqube/sonarqube-original-wordmark.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/ubuntu/ubuntu-original.svg" width="50" height="50" />
+  &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/yaml/yaml-original.svg" width="50" height="50" />
+ &nbsp;&nbsp;&nbsp;
 
 
  
