@@ -26,13 +26,13 @@
   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" title="Docker" alt="Docker"  height="46"/>
   &nbsp;&nbsp;&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/terraform/terraform-original.svg"  width="43" height="43"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/terraform/terraform-original-wordmark.svg"  width="43" height="43"/>
   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/ansible/ansible-original.svg"  width="50" height="50"/>
   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/jenkins/jenkins-original.svg" height="40"/>
   &nbsp;&nbsp;&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="Git"  width="50" height="50"/> 
+<img src="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" title="Git"  width="50" height="50"/> 
   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg"  height="50"/>
   &nbsp;&nbsp;&nbsp;
@@ -41,6 +41,21 @@
  <img src="https://github.com/devicons/devicon/blob/master/icons/wordpress/wordpress-original.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/cloudflare/cloudflare-original.svg" width="50" height="50" />
  <img src="https://github.com/devicons/devicon/blob/master/icons/grafana/grafana-original.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-plain-wordmark.svg" width="50" height="50" />
+ <img src=" https://github.com/devicons/devicon/blob/master/icons/sonarqube/sonarqube-original-wordmark.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/windows11/windows11-original.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/ubuntu/ubuntu-original.svg" width="50" height="50" />
+ <img src="https://github.com/devicons/devicon/blob/master/icons/yaml/yaml-original.svg" width="50" height="50" />
+
+
+ 
+ 
+ 
+ 
+ 
 
 </div>
 
