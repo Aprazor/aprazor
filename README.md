@@ -17,7 +17,7 @@
 - Ask me about DevOps, Cloud Technologies and Networking
 
 
-# 🛠 Tech Stack
+[comment]: <> ( # 🛠 Tech Stack
 
 <div align="center"> 
   <img src="https://github.com/devicons/devicon/blob/master/icons/kubernetes/kubernetes-original.svg" width="50" height="50"/>
@@ -60,7 +60,7 @@
   &nbsp;&nbsp;&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/yaml/yaml-original.svg" width="50" height="50" />
  &nbsp;&nbsp;&nbsp;
-
+)
 
  
  
