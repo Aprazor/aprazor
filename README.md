@@ -120,8 +120,6 @@ Multi-cluster bare-metal Kubernetes across 10+ global data centers. Authored Hel
 
 <div align="center">
 
-*"If I did it twice, I'll automate it. If it broke at 3am, I'll monitor it."*
-
 <br>
 
 ![Profile Views](https://komarev.com/ghpvc/?username=aprazor&color=58a6ff&style=flat-square&label=Profile+Views)
