@@ -59,14 +59,9 @@
 ## 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aprazor&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=7ee787&text_color=c9d1d9" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aprazor&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" height="170" />
-</div>
 
-<br>
+[![GitHub Streak](https://streak-stats.demolab.com?user=aprazor&theme=github-dark-blue&hide_border=true&background=0D1117)](https://github.com/aprazor)
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=aprazor&theme=github-dark-blue&hide_border=true&background=0D1117" />
 </div>
 
 <br>
@@ -125,6 +120,7 @@ Multi-cluster bare-metal Kubernetes across 10+ global data centers. Authored Hel
 
 <div align="center">
 
+*"If I did it twice, I'll automate it. If it broke at 3am, I'll monitor it."*
 
 <br>
 
