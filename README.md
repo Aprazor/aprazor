@@ -42,19 +42,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-<br>
 
-## 🌱 Open Source Contributions
-
-| Project | Stars | Merged | What I Contributed |
-|:--------|:-----:|:------:|:-------------------|
-| [**srl-labs/containerlab**](https://github.com/srl-labs/containerlab) | ⭐ 2.5k | **8 PRs** | Nil panic fixes, resource leak patches, error propagation across node types, certificate handling |
-| [**prometheus/snmp_exporter**](https://github.com/prometheus/snmp_exporter) | ⭐ 2.1k | **2 PRs** | SNMPv3 EngineID hex decode fix, generator output file handle leak |
-| [**prometheus-community/fortigate_exporter**](https://github.com/prometheus-community/fortigate_exporter) | ⭐ 200+ | **2 PRs** | Swapped min/max metric names, FortiOS 7.4+ version comparison fix |
-
-> **12 merged PRs** across 3 projects — plus **15+ open PRs** in containerlab, kube-router, blackbox_exporter, gobgp, and more.
-
-<br>
 
 ## 📈 GitHub Stats
 
