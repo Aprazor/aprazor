@@ -92,11 +92,6 @@ Automated bare-metal switch bootstrapping. New switch gets plugged into the rack
 
 ---
 
-**☸️ Bare-Metal Kubernetes Platform** · ![Production](https://img.shields.io/badge/Production-7ee787?style=flat-square)
-
-Multi-cluster bare-metal Kubernetes across 10+ global data centers. Authored Helm charts for MetalLB (BGP + L2), Kea DHCP, Oxidized, and the full monitoring stack. Per-datacenter values overlays, PXE boot provisioning for worker nodes, and CI/CD via Concourse pipelines.
-
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white) ![MetalLB](https://img.shields.io/badge/MetalLB-FB923C?style=flat-square) ![PXE Boot](https://img.shields.io/badge/PXE_Boot-444?style=flat-square) ![Concourse](https://img.shields.io/badge/Concourse_CI-6540A5?style=flat-square) ![Multi‑DC](https://img.shields.io/badge/Multi--DC-333?style=flat-square)
 
 <br>
 
