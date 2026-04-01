@@ -93,18 +93,3 @@ Automated bare-metal switch bootstrapping. New switch gets plugged into the rack
 ---
 
 
-<br>
-
-## 💬 Let's Connect
-
-[![Email](https://img.shields.io/badge/Email_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aprazors@gmail.com)
-
----
-
-<div align="center">
-
-<br>
-
-![Profile Views](https://komarev.com/ghpvc/?username=aprazor&color=58a6ff&style=flat-square&label=Profile+Views)
-
-</div>
