@@ -52,21 +52,21 @@
 
 > These PRs started as [Claude Code](https://claude.ai/code) audit sessions on projects I use daily. Claude finds what humans skip — unchecked errors, nil panics, leaky file handles. I decide what's worth fixing, validate against real infra, and write the PR.
 
-![Merged](https://img.shields.io/badge/12-Merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/27-Open-1f6feb?style=flat-square) across **10+ projects** with **23k+ combined stars**
+![Merged](https://img.shields.io/badge/23-Merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/28-Open-1f6feb?style=flat-square) across **11 projects** with **30k+ combined stars**
 
 <br>
 
-| Project | Stars | PRs | Focus |
-|---------|-------|-----|-------|
-| [srl-labs/containerlab](https://github.com/srl-labs/containerlab) | ⭐ 2.5k | ![Merged](https://img.shields.io/badge/8-merged-238636?style=flat-square) | Nil panics, resource leaks, error propagation |
-| [metallb/metallb](https://github.com/metallb/metallb) | ⭐ 7.3k | ![Open](https://img.shields.io/badge/5-open-1f6feb?style=flat-square) | Pool sorting, BGP handlers, interface scanning |
-| [prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter) | ⭐ 4.9k | ![Open](https://img.shields.io/badge/3-open-1f6feb?style=flat-square) | gRPC errors, goroutine leaks, TLS handling |
-| [osrg/gobgp](https://github.com/osrg/gobgp) | ⭐ 3.8k | ![Open](https://img.shields.io/badge/2-open-1f6feb?style=flat-square) | Nil dereference, state machine errors |
-| [cloudnativelabs/kube-router](https://github.com/cloudnativelabs/kube-router) | ⭐ 2.6k | ![Open](https://img.shields.io/badge/3-open-1f6feb?style=flat-square) | Race conditions, atomic ops, controller hardening |
-| [prometheus/snmp_exporter](https://github.com/prometheus/snmp_exporter) | ⭐ 1.5k | ![Merged](https://img.shields.io/badge/2-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/1-open-1f6feb?style=flat-square) | Error handling, resource cleanup |
-| [fortigate_exporter](https://github.com/prometheus-community/fortigate_exporter) | ⭐ 200+ | ![Merged](https://img.shields.io/badge/2-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/3-open-1f6feb?style=flat-square) | Version gates, metric accuracy |
-| [tynany/junos_exporter](https://github.com/tynany/junos_exporter) | ⭐ 100+ | ![Open](https://img.shields.io/badge/7-open-1f6feb?style=flat-square) | Collector validation, NETCONF errors |
-| [czerwonk/ping_exporter](https://github.com/czerwonk/ping_exporter) | ⭐ 200+ | ![Open](https://img.shields.io/badge/4-open-1f6feb?style=flat-square) | IPv6, division-by-zero, test guards |
+| Project | Stars | PRs |
+|---------|-------|-----|
+| [srl-labs/containerlab](https://github.com/srl-labs/containerlab) | ⭐ 2.5k | ![Merged](https://img.shields.io/badge/9-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/7-open-1f6feb?style=flat-square) |
+| [metallb/metallb](https://github.com/metallb/metallb) | ⭐ 7.3k | ![Open](https://img.shields.io/badge/4-open-1f6feb?style=flat-square) |
+| [cilium/cilium](https://github.com/cilium/cilium) | ⭐ 21k | ![Open](https://img.shields.io/badge/5-open-1f6feb?style=flat-square) |
+| [prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter) | ⭐ 4.9k | ![Open](https://img.shields.io/badge/3-open-1f6feb?style=flat-square) |
+| [cloudnativelabs/kube-router](https://github.com/cloudnativelabs/kube-router) | ⭐ 2.6k | ![Merged](https://img.shields.io/badge/2-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/1-open-1f6feb?style=flat-square) |
+| [tynany/junos_exporter](https://github.com/tynany/junos_exporter) | ⭐ 100+ | ![Merged](https://img.shields.io/badge/7-merged-238636?style=flat-square) |
+| [prometheus/snmp_exporter](https://github.com/prometheus/snmp_exporter) | ⭐ 1.5k | ![Merged](https://img.shields.io/badge/2-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/1-open-1f6feb?style=flat-square) |
+| [fortigate_exporter](https://github.com/prometheus-community/fortigate_exporter) | ⭐ 200+ | ![Merged](https://img.shields.io/badge/2-merged-238636?style=flat-square) ![Open](https://img.shields.io/badge/3-open-1f6feb?style=flat-square) |
+| [czerwonk/ping_exporter](https://github.com/czerwonk/ping_exporter) | ⭐ 200+ | ![Open](https://img.shields.io/badge/4-open-1f6feb?style=flat-square) |
 
 <br>
 
