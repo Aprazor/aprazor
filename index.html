@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam Ippar — Infrastructure & Network Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #0a0c10;
+  --bg-panel: #0f1218;
+  --bg-card: #141820;
+  --bg-elevated: #1a1f2a;
+  --border-dim: #1e2432;
+  --border-mid: #2a3244;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8892a4;
+  --text-dim: #4a5568;
+  --accent-amber: #f59e0b;
+  --accent-cyan: #06b6d4;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-purple: #a855f7;
+  --accent-blue: #3b82f6;
+  --accent-pink: #ec4899;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border-dim) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-dim) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══ HERO ═══ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-dot {
+  width: 8px; height: 8px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+  box-shadow: 0 0 8px #10b98180;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero-status span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.hero h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 .name {
+  background: linear-gradient(135deg, var(--accent-amber) 0%, #fbbf24 50%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero .role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.hero-tagline strong { color: var(--text-primary); }
+
+/* Typing effect */
+.typing-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  margin-bottom: 0.3rem;
+  opacity: 0;
+  animation: typeIn 0.5s ease forwards;
+}
+
+.typing-line::before {
+  content: '$ ';
+  color: var(--text-dim);
+}
+
+.typing-line:nth-child(1) { animation-delay: 0.3s; }
+.typing-line:nth-child(2) { animation-delay: 0.9s; }
+.typing-line:nth-child(3) { animation-delay: 1.5s; }
+.typing-line:nth-child(4) { animation-delay: 2.1s; }
+
+@keyframes typeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.cursor-blink::after {
+  content: '█';
+  animation: blink 1s step-end infinite;
+  color: var(--accent-green);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Stats row in hero */
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.hero-stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+/* Scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.scroll-hint span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid var(--text-dim);
+  border-bottom: 2px solid var(--text-dim);
+  transform: rotate(45deg);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ═══ SECTIONS ═══ */
+section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-dim);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-dim);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+}
+
+h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ═══ ABOUT ═══ */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--border-dim);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.about-card {
+  background: var(--bg-panel);
+  padding: 1.5rem;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.about-card:hover { background: var(--bg-card); }
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.about-card:nth-child(1)::before { background: var(--accent-cyan); }
+.about-card:nth-child(2)::before { background: var(--accent-amber); }
+.about-card:nth-child(3)::before { background: var(--accent-green); }
+.about-card:nth-child(4)::before { background: var(--accent-purple); }
+
+.about-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.about-card:nth-child(1) h3 { color: var(--accent-cyan); }
+.about-card:nth-child(2) h3 { color: var(--accent-amber); }
+.about-card:nth-child(3) h3 { color: var(--accent-green); }
+.about-card:nth-child(4) h3 { color: var(--accent-purple); }
+
+.about-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about-card .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+}
+
+.tech-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  border: 1px solid var(--border-mid);
+  color: var(--text-dim);
+  letter-spacing: 0.03em;
+}
+
+/* ═══ OPEN SOURCE ═══ */
+.oss-intro {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.oss-intro::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+}
+
+.oss-intro p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.oss-intro strong { color: var(--text-primary); }
+
+.oss-intro .claude-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #d4a574 0%, #c4956a 100%);
+  color: #1a1008;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+.oss-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--border-dim);
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.oss-stat {
+  background: var(--bg-panel);
+  padding: 1rem 1.2rem;
+}
+
+.oss-stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.oss-stat-value.merged { color: var(--accent-green); }
+.oss-stat-value.open { color: var(--accent-blue); }
+.oss-stat-value.projects { color: var(--accent-amber); }
+.oss-stat-value.stars { color: var(--accent-purple); }
+
+.oss-stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+/* Contribution cards */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.contrib-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.contrib-card:hover {
+  border-color: var(--border-mid);
+  background: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+.contrib-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contrib-card:hover::after { opacity: 1; }
+.contrib-card.merged::after { background: var(--accent-green); }
+.contrib-card.open-pr::after { background: var(--accent-blue); }
+
+.contrib-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.contrib-repo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.contrib-stars {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.contrib-stars::before {
+  content: '★ ';
+  color: var(--accent-amber);
+}
+
+.contrib-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.contrib-prs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pr-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.pr-badge.merged {
+  background: #06291e;
+  color: var(--accent-green);
+  border: 1px solid #10b98140;
+}
+
+.pr-badge.open-pr {
+  background: #0a1628;
+  color: var(--accent-blue);
+  border: 1px solid #3b82f640;
+}
+
+.contrib-focus {
+  margin-top: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ═══ BUILT AT WORK ═══ */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border-dim);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project-item {
+  background: var(--bg-panel);
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.project-item:hover { background: var(--bg-card); }
+
+.project-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.project-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-status.prod {
+  background: #06291e;
+  color: var(--accent-green);
+  border: 1px solid #10b98140;
+}
+
+.project-status.building {
+  background: #1a0f2e;
+  color: var(--accent-purple);
+  border: 1px solid #a855f740;
+}
+
+/* ═══ TECH STACK ═══ */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+}
+
+.stack-item {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+  padding: 0.8rem;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.stack-item:hover {
+  border-color: var(--border-mid);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.stack-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.stack-item:hover::before { opacity: 1; }
+
+.stack-item.lang::before { background: var(--accent-amber); }
+.stack-item.infra::before { background: var(--accent-cyan); }
+.stack-item.net::before { background: var(--accent-green); }
+.stack-item.obs::before { background: var(--accent-red); }
+
+.stack-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+/* ═══ FOOTER ═══ */
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-dim);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--accent-cyan); }
+
+.footer-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+}
+
+/* ═══ ANIMATIONS ═══ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .project-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .hero-stats { gap: 1.5rem; }
+  .contrib-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-status">
+    <div class="status-dot"></div>
+    <span>Available for collaboration</span>
+  </div>
+
+  <h1><span class="name">Sam Ippar</span></h1>
+  <div class="role">Infrastructure & Network Engineer</div>
+
+  <div class="hero-tagline">
+    Managing <strong>bare-metal Kubernetes</strong> and <strong>datacenter networking</strong> across <strong>10+ global sites</strong>. I design, automate, and monitor production infrastructure — from <strong>switch ports to pod deployments</strong>.
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <div class="typing-line">kubectl get nodes --all-clusters | wc -l → 500+</div>
+    <div class="typing-line">show bgp summary | match Estab → 40+ sessions</div>
+    <div class="typing-line">gh pr list --author aprazor --state merged → 12 upstream</div>
+    <div class="typing-line cursor-blink">uptime → building infra at scale since day one</div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--accent-amber)">10+</div>
+      <div class="hero-stat-label">Global DC Sites</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--accent-cyan)">44</div>
+      <div class="hero-stat-label">Upstream PRs</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--accent-green)">12</div>
+      <div class="hero-stat-label">PRs Merged</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value" style="color:var(--accent-purple)">10+</div>
+      <div class="hero-stat-label">OSS Projects</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="fade-up">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>What I Do</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Infrastructure & Kubernetes</h3>
+      <p>Bare-metal K8s clusters, Helm charts for production services, CI/CD with Concourse, PXE boot provisioning at scale.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Kubernetes</span>
+        <span class="tech-tag">Helm</span>
+        <span class="tech-tag">Concourse</span>
+        <span class="tech-tag">PXE/Matchbox</span>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Networking</h3>
+      <p>BGP routing across datacenters, Juniper JunOS switch management, FortiGate firewalls, EVPN-VXLAN fabrics, MetalLB load balancing.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">BGP</span>
+        <span class="tech-tag">MC-AE</span>
+        <span class="tech-tag">EVPN-VXLAN</span>
+        <span class="tech-tag">JunOS</span>
+        <span class="tech-tag">FortiGate</span>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Automation & IaC</h3>
+      <p>Python/Ansible network automation, MCP servers for AI-powered device management, Zero Touch Provisioning across switch fleets.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Ansible</span>
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">MCP</span>
+        <span class="tech-tag">ZTP</span>
+      </div>
+    </div>
+    <div class="about-card">
+      <h3>Observability</h3>
+      <p>Prometheus/Grafana dashboards & alerting, VictoriaMetrics, automated incident diagnostics, git-versioned config backup.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Prometheus</span>
+        <span class="tech-tag">Grafana</span>
+        <span class="tech-tag">VictoriaMetrics</span>
+        <span class="tech-tag">Alertmanager</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OPEN SOURCE ═══ -->
+<section class="fade-up">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Open Source Contributions</h2>
+  </div>
+
+  <div class="oss-intro">
+    <p>
+      I contribute to infrastructure and networking projects I use in production.
+      These contributions were made <strong>with the help of <span class="claude-badge">&#9672; Claude Code</span></strong> — AI-assisted code review that helped me find real bugs: unchecked errors, nil panics, resource leaks, race conditions. I review every line, understand every fix, and test before submitting. Claude finds patterns I'd miss; I provide the domain context and production experience.
+    </p>
+  </div>
+
+  <div class="oss-stats-bar">
+    <div class="oss-stat">
+      <div class="oss-stat-value merged">12</div>
+      <div class="oss-stat-label">PRs Merged</div>
+    </div>
+    <div class="oss-stat">
+      <div class="oss-stat-value open">27</div>
+      <div class="oss-stat-label">PRs Open</div>
+    </div>
+    <div class="oss-stat">
+      <div class="oss-stat-value projects">10+</div>
+      <div class="oss-stat-label">Projects</div>
+    </div>
+    <div class="oss-stat">
+      <div class="oss-stat-value stars">23k+</div>
+      <div class="oss-stat-label">Combined Repo Stars</div>
+    </div>
+  </div>
+
+  <div class="contrib-grid">
+
+    <div class="contrib-card merged">
+      <div class="contrib-header">
+        <div class="contrib-repo">srl-labs/containerlab</div>
+        <div class="contrib-stars">2.5k</div>
+      </div>
+      <div class="contrib-desc">Container-based networking lab tool. Fixed nil panics, resource leaks, error propagation across node types.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge merged">#3130 merged</span>
+        <span class="pr-badge merged">#3131 merged</span>
+        <span class="pr-badge merged">#3132 merged</span>
+        <span class="pr-badge merged">#3133 merged</span>
+        <span class="pr-badge merged">#3134 merged</span>
+        <span class="pr-badge merged">#3138 merged</span>
+        <span class="pr-badge merged">#3139 merged</span>
+        <span class="pr-badge merged">#3140 merged</span>
+      </div>
+      <div class="contrib-focus">Focus: error handling, nil guards, file handle leaks</div>
+    </div>
+
+    <div class="contrib-card open-pr">
+      <div class="contrib-header">
+        <div class="contrib-repo">metallb/metallb</div>
+        <div class="contrib-stars">7.3k</div>
+      </div>
+      <div class="contrib-desc">Kubernetes network load balancer. Fixed pool sorting, BGP handler issues, interface scanning errors.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge open-pr">#2986 open</span>
+        <span class="pr-badge open-pr">#2987 open</span>
+        <span class="pr-badge open-pr">#2988 open</span>
+        <span class="pr-badge open-pr">#2989 open</span>
+        <span class="pr-badge open-pr">#2990 open</span>
+      </div>
+      <div class="contrib-focus">Focus: strict weak ordering, variable shadowing, debug cleanup</div>
+    </div>
+
+    <div class="contrib-card open-pr">
+      <div class="contrib-header">
+        <div class="contrib-repo">prometheus/blackbox_exporter</div>
+        <div class="contrib-stars">4.9k</div>
+      </div>
+      <div class="contrib-desc">Network probing exporter. Fixed gRPC client errors, TLS error path, goroutine leaks from time.Tick.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge open-pr">#1557 open</span>
+        <span class="pr-badge open-pr">#1558 open</span>
+        <span class="pr-badge open-pr">#1559 open</span>
+      </div>
+      <div class="contrib-focus">Focus: goroutine leaks, error propagation, TLS handling</div>
+    </div>
+
+    <div class="contrib-card open-pr">
+      <div class="contrib-header">
+        <div class="contrib-repo">osrg/gobgp</div>
+        <div class="contrib-stars">3.8k</div>
+      </div>
+      <div class="contrib-desc">BGP implementation in Go. Fixed nil dereference in UPDATE validation and keepalive error handling.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge open-pr">#3351 open</span>
+        <span class="pr-badge open-pr">#3352 open</span>
+      </div>
+      <div class="contrib-focus">Focus: nil dereference, variable shadowing, state machine errors</div>
+    </div>
+
+    <div class="contrib-card open-pr">
+      <div class="contrib-header">
+        <div class="contrib-repo">cloudnativelabs/kube-router</div>
+        <div class="contrib-stars">2.6k</div>
+      </div>
+      <div class="contrib-desc">Turnkey K8s networking. Fixed race conditions with atomic.Bool, hardened multiple controllers.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge open-pr">#2038 open</span>
+        <span class="pr-badge open-pr">#2041 open</span>
+        <span class="pr-badge open-pr">#2042 open</span>
+      </div>
+      <div class="contrib-focus">Focus: race conditions, atomic operations, controller hardening</div>
+    </div>
+
+    <div class="contrib-card merged">
+      <div class="contrib-header">
+        <div class="contrib-repo">prometheus/snmp_exporter</div>
+        <div class="contrib-stars">1.5k</div>
+      </div>
+      <div class="contrib-desc">SNMP metrics exporter. Fixed hex decode error handling and generator file handle leak.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge merged">#1591 merged</span>
+        <span class="pr-badge merged">#1592 merged</span>
+        <span class="pr-badge open-pr">#1590 open</span>
+      </div>
+      <div class="contrib-focus">Focus: error handling, resource cleanup</div>
+    </div>
+
+    <div class="contrib-card merged">
+      <div class="contrib-header">
+        <div class="contrib-repo">prometheus-community/fortigate_exporter</div>
+        <div class="contrib-stars">200+</div>
+      </div>
+      <div class="contrib-desc">FortiGate metrics for Prometheus. Fixed version comparison logic and swapped metric names.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge merged">#383 merged</span>
+        <span class="pr-badge merged">#385 merged</span>
+        <span class="pr-badge open-pr">#381 open</span>
+        <span class="pr-badge open-pr">#382 open</span>
+        <span class="pr-badge open-pr">#384 open</span>
+      </div>
+      <div class="contrib-focus">Focus: version gates, metric accuracy, panic prevention</div>
+    </div>
+
+    <div class="contrib-card open-pr">
+      <div class="contrib-header">
+        <div class="contrib-repo">tynany/junos_exporter</div>
+        <div class="contrib-stars">100+</div>
+      </div>
+      <div class="contrib-desc">Juniper device metrics. Fixed collector validation, handler panics, NETCONF error checking.</div>
+      <div class="contrib-prs">
+        <span class="pr-badge open-pr">#31</span>
+        <span class="pr-badge open-pr">#32</span>
+        <span class="pr-badge open-pr">#33</span>
+        <span class="pr-badge open-pr">#34</span>
+        <span class="pr-badge open-pr">#35</span>
+        <span class="pr-badge open-pr">#36</span>
+        <span class="pr-badge open-pr">#37</span>
+      </div>
+      <div class="contrib-focus">Focus: error handling, collector validation, speed parsing</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PRODUCTION TOOLS ═══ -->
+<section class="fade-up">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>Production Tools I've Built</h2>
+  </div>
+
+  <div class="project-list">
+    <div class="project-item">
+      <div class="project-name">VLAN Automation</div>
+      <div class="project-desc">Full-stack VLAN discovery & config across 100+ DC switches. Route-based detection, 100% accuracy.</div>
+      <div class="project-status prod">PRODUCTION</div>
+    </div>
+    <div class="project-item">
+      <div class="project-name">Network Alert Bot</div>
+      <div class="project-desc">Monitors Prometheus alerts, SSHes into devices, runs diagnostics, posts to chat. 18+ alert types.</div>
+      <div class="project-status prod">PRODUCTION</div>
+    </div>
+    <div class="project-item">
+      <div class="project-name">Config Backup</div>
+      <div class="project-desc">Automated network device config backup & Git versioning across 4+ datacenters. K8s deployed, REST API.</div>
+      <div class="project-status prod">PRODUCTION</div>
+    </div>
+    <div class="project-item">
+      <div class="project-name">MCP Servers</div>
+      <div class="project-desc">AI-powered device management — FortiGate & JunOS MCP servers for Claude Code integration.</div>
+      <div class="project-status prod">PRODUCTION</div>
+    </div>
+    <div class="project-item">
+      <div class="project-name">Zero Touch Provisioning</div>
+      <div class="project-desc">Automated bare-metal switch bootstrapping via DHCP + NETCONF. Plug in, walk away.</div>
+      <div class="project-status building">BUILDING</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECH STACK ═══ -->
+<section class="fade-up">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2>Tech Stack</h2>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-item lang"><span class="stack-icon">🐍</span>Python</div>
+    <div class="stack-item lang"><span class="stack-icon">🔵</span>Go</div>
+    <div class="stack-item lang"><span class="stack-icon">💲</span>Bash</div>
+    <div class="stack-item lang"><span class="stack-icon">📐</span>HCL</div>
+    <div class="stack-item infra"><span class="stack-icon">☸️</span>Kubernetes</div>
+    <div class="stack-item infra"><span class="stack-icon">⎈</span>Helm</div>
+    <div class="stack-item infra"><span class="stack-icon">🐳</span>Docker</div>
+    <div class="stack-item infra"><span class="stack-icon">📦</span>Ansible</div>
+    <div class="stack-item infra"><span class="stack-icon">🏗️</span>Terraform</div>
+    <div class="stack-item net"><span class="stack-icon">🌿</span>Juniper</div>
+    <div class="stack-item net"><span class="stack-icon">🛡️</span>FortiGate</div>
+    <div class="stack-item net"><span class="stack-icon">🔀</span>MetalLB</div>
+    <div class="stack-item obs"><span class="stack-icon">🔥</span>Prometheus</div>
+    <div class="stack-item obs"><span class="stack-icon">📊</span>Grafana</div>
+    <div class="stack-item obs"><span class="stack-icon">📈</span>VictoriaMetrics</div>
+    <div class="stack-item lang"><span class="stack-icon">🐧</span>Linux</div>
+    <div class="stack-item infra"><span class="stack-icon">🔄</span>Concourse CI</div>
+    <div class="stack-item lang"><span class="stack-icon">🔗</span>Git</div>
+  </div>
+</section>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/aprazor">GitHub</a>
+      <a href="https://linkedin.com/in/samippar">LinkedIn</a>
+    </div>
+    <div class="footer-note">Built with curiosity and Claude Code</div>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
